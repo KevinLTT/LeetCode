@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Kevin/Desktop/Project/LeetCode/main.cpp
+u.h
+/Users/Kevin/Desktop/Project/LeetCode/u.h
+
+/Users/Kevin/Desktop/Project/LeetCode/u.h
+stack
+-
+set
+-
+cmath
+-
+string
+-
+vector
+-
+algorithm
+-
+memory
+-
+iostream
+-
+sstream
+-
+climits
+-
+cstdlib
+-
+map
+-
+

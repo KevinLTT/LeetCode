@@ -57,38 +57,38 @@ include CMakeFiles/a.out.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/a.out.dir/flags.make
 
-CMakeFiles/a.out.dir/main.cpp.o: CMakeFiles/a.out.dir/flags.make
-CMakeFiles/a.out.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/Desktop/Project/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.out.dir/main.cpp.o -c /home/kevin/Desktop/Project/LeetCode/main.cpp
+CMakeFiles/a.out.dir/0030_2.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/0030_2.cpp.o: ../0030_2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/Desktop/Project/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/0030_2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.out.dir/0030_2.cpp.o -c /home/kevin/Desktop/Project/LeetCode/0030_2.cpp
 
-CMakeFiles/a.out.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/Desktop/Project/LeetCode/main.cpp > CMakeFiles/a.out.dir/main.cpp.i
+CMakeFiles/a.out.dir/0030_2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/0030_2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/Desktop/Project/LeetCode/0030_2.cpp > CMakeFiles/a.out.dir/0030_2.cpp.i
 
-CMakeFiles/a.out.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/Desktop/Project/LeetCode/main.cpp -o CMakeFiles/a.out.dir/main.cpp.s
+CMakeFiles/a.out.dir/0030_2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/0030_2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/Desktop/Project/LeetCode/0030_2.cpp -o CMakeFiles/a.out.dir/0030_2.cpp.s
 
-CMakeFiles/a.out.dir/main.cpp.o.requires:
+CMakeFiles/a.out.dir/0030_2.cpp.o.requires:
 
-.PHONY : CMakeFiles/a.out.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/a.out.dir/0030_2.cpp.o.requires
 
-CMakeFiles/a.out.dir/main.cpp.o.provides: CMakeFiles/a.out.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/a.out.dir/main.cpp.o.provides
+CMakeFiles/a.out.dir/0030_2.cpp.o.provides: CMakeFiles/a.out.dir/0030_2.cpp.o.requires
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0030_2.cpp.o.provides.build
+.PHONY : CMakeFiles/a.out.dir/0030_2.cpp.o.provides
 
-CMakeFiles/a.out.dir/main.cpp.o.provides.build: CMakeFiles/a.out.dir/main.cpp.o
+CMakeFiles/a.out.dir/0030_2.cpp.o.provides.build: CMakeFiles/a.out.dir/0030_2.cpp.o
 
 
 # Object files for target a.out
 a_out_OBJECTS = \
-"CMakeFiles/a.out.dir/main.cpp.o"
+"CMakeFiles/a.out.dir/0030_2.cpp.o"
 
 # External object files for target a.out
 a_out_EXTERNAL_OBJECTS =
 
-a.out: CMakeFiles/a.out.dir/main.cpp.o
+a.out: CMakeFiles/a.out.dir/0030_2.cpp.o
 a.out: CMakeFiles/a.out.dir/build.make
 a.out: CMakeFiles/a.out.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kevin/Desktop/Project/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable a.out"
@@ -99,7 +99,7 @@ CMakeFiles/a.out.dir/build: a.out
 
 .PHONY : CMakeFiles/a.out.dir/build
 
-CMakeFiles/a.out.dir/requires: CMakeFiles/a.out.dir/main.cpp.o.requires
+CMakeFiles/a.out.dir/requires: CMakeFiles/a.out.dir/0030_2.cpp.o.requires
 
 .PHONY : CMakeFiles/a.out.dir/requires
 

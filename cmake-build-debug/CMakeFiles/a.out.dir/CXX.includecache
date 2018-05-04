@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/kevin/Desktop/Project/LeetCode/main.cpp
+/home/kevin/Desktop/Project/LeetCode/0030_2.cpp
 u.h
 /home/kevin/Desktop/Project/LeetCode/u.h
 
 /home/kevin/Desktop/Project/LeetCode/u.h
+unordered_map
+-
+stack
+-
 set
 -
 cmath

@@ -17,10 +17,13 @@ public:
         if( s.empty() )
             return 0;
 
-        vector<bool> valid( s.size(), false );
+        vector<int> valid( s.size(), -1 );
         for( int i = 0; i < s.size()-1; i++ )
             if( pair( s, i, i+1 ) )
-                valid[i] = valid[i+1] = true;
+            {
+                valid[i] = 2;
+                valid[i+1] = i;
+            }
 
         int longest = 0;
         while( 1 )
@@ -32,9 +35,9 @@ public:
             int begin = -1;
             for( int i = 0; i < s.size(); i++ )
             {
-                if( valid[i] )
+                if( valid[i] >= 0 )
                 {
-                    if( preValid == false )
+                    if( i-1 >= 0 && valid[i-1] < 0 )
                     {
                         begin = i;
                         length = 1;
@@ -42,17 +45,25 @@ public:
                     else
                     {
                         length++;
+                        valid[begin] = length;
+                        valid[i] = begin;
                     }
-                    preValid = true;        
                 }
-                else if( preValid )
+                else if( i-1 >= 0 && valid[i-1] >= 0 )
                 {
                     if( begin-1 >= 0 && i < s.size() && pair( s, begin-1, i ) )
                     {
-                        valid[begin-1] = valid[i] = true;
+                        valid[i] = begin-1;
+                        valid[begin-1] = valid[begin]+2;
                         length += 2;
                         begin = begin-1;
-                        preValid = true;
+                        if( begin-1 >= 0 && valid[begin-1] >= 0 )
+                        {
+                            valid[i] = valid[begin-1];
+                            valid[valid[i]] = valid[valid[i]] + valid[begin];
+                            begin = valid[i];
+                            length = valid[valid[i]];
+                        }
                     }
                     else
                     {
@@ -63,7 +74,6 @@ public:
                         }
 
                         length = 0;
-                        preValid = false;
                     }
                 }
             }
@@ -86,8 +96,8 @@ int main()
 {
     Solution s;
     //           0123456789012345678901234
-    string str( ")(((((()())()()))()(()))(" );
-    string str1( "()()(()(((()))()))()))))()(())))()(()())()()()))())))())())))(()()()))))()((()(())(())))((()())(()()()((((()(())))))((()()((())(())(()(())))))()()())(())(()())((()())()(((())))()(()()))" );
+    //string str( ")(((((()())()()))()(()))(" );
+    string str( "()()(()(((()))()))()))))()(())))()(()())()()()))())))())())))(()()()))))()((()(())(())))((()())(()()()((((()(())))))((()()((())(())(()(())))))()()())(())(()())((()())()(((())))()(()()))" );
     //string str( "()" );
     //cin >> str;
     cout << s.longestValidParentheses( str ) << endl;

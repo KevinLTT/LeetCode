@@ -37,7 +37,7 @@ public:
             {
                 if( valid[i] >= 0 )
                 {
-                    if( i-1 >= 0 && valid[i-1] < 0 )
+                    if( i == 0 || i-1 >= 0 && valid[i-1] < 0 )
                     {
                         begin = i;
                         length = 1;

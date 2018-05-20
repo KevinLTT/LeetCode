@@ -2,31 +2,81 @@
 
 class Solution {
 public:
+    bool pair( string s, int i, int j )
+    {
+        if( i >= s.size() || j >= s.size() )
+            return false;
+
+        if( s[i] == '(' && s[j] == ')' )
+            return true;
+        else
+            return false;
+    }
+
     int longestValidParentheses(string s) {
-        stack<char> Stack;
+        if( s.empty() )
+            return 0;
+
+        vector<bool> valid( s.size(), false );
+        for( int i = 0; i < s.size()-1; i++ )
+            if( pair( s, i, i+1 ) )
+                valid[i] = valid[i+1] = true;
+
         int longest = 0;
-        int length = 0;
-        for( int i = 0; i < s.size(); i++ )
+        while( 1 )
         {
-            if( s[i] == '(' )
-                Stack.push( s[i] );
-            else if( s[i] == ')' )
+            bool find = false;
+            
+            bool preValid = false;
+            int length = 0;
+            int begin = -1;
+            for( int i = 0; i < s.size(); i++ )
             {
-                if( Stack.empty() )
+                if( valid[i] )
                 {
-                    if( length > longest )
-                        longest = length;
-                    length = 0;
+                    if( preValid == false )
+                    {
+                        begin = i;
+                        length = 1;
+                    }
+                    else
+                    {
+                        length++;
+                    }
+                    preValid = true;        
                 }
-                else
+                else if( preValid )
                 {
-                    Stack.pop();
-                    length += 2;
+                    if( begin-1 >= 0 && i < s.size() && pair( s, begin-1, i ) )
+                    {
+                        valid[begin-1] = valid[i] = true;
+                        length += 2;
+                        begin = begin-1;
+                        preValid = true;
+                    }
+                    else
+                    {
+                        if( length > longest )
+                        {
+                            find = true;
+                            longest = length;
+                        }
+
+                        length = 0;
+                        preValid = false;
+                    }
                 }
             }
+
+            if( length > longest )
+            {
+                find = true;
+                longest = length;
+            }
+
+            if( !find )
+                break;
         }
-        if( length > longest )
-            longest = length;
 
         return longest;
     }
@@ -35,7 +85,10 @@ public:
 int main()
 {
     Solution s;
-    string str;
-    cin >> str;
+    //           0123456789012345678901234
+    string str( ")(((((()())()()))()(()))(" );
+    string str1( "()()(()(((()))()))()))))()(())))()(()())()()()))())))())())))(()()()))))()((()(())(())))((()())(()()()((((()(())))))((()()((())(())(()(())))))()()())(())(()())((()())()(((())))()(()()))" );
+    //string str( "()" );
+    //cin >> str;
     cout << s.longestValidParentheses( str ) << endl;
 }

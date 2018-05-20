@@ -123,32 +123,32 @@ a.out/fast:
 	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
 .PHONY : a.out/fast
 
-main.o: main.cpp.o
+0032_longestValidParentheses.o: 0032_longestValidParentheses.cpp.o
 
-.PHONY : main.o
+.PHONY : 0032_longestValidParentheses.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.o
-.PHONY : main.cpp.o
+0032_longestValidParentheses.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o
+.PHONY : 0032_longestValidParentheses.cpp.o
 
-main.i: main.cpp.i
+0032_longestValidParentheses.i: 0032_longestValidParentheses.cpp.i
 
-.PHONY : main.i
+.PHONY : 0032_longestValidParentheses.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.i
-.PHONY : main.cpp.i
+0032_longestValidParentheses.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.i
+.PHONY : 0032_longestValidParentheses.cpp.i
 
-main.s: main.cpp.s
+0032_longestValidParentheses.s: 0032_longestValidParentheses.cpp.s
 
-.PHONY : main.s
+.PHONY : 0032_longestValidParentheses.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.s
-.PHONY : main.cpp.s
+0032_longestValidParentheses.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.s
+.PHONY : 0032_longestValidParentheses.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... a.out"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... 0032_longestValidParentheses.o"
+	@echo "... 0032_longestValidParentheses.i"
+	@echo "... 0032_longestValidParentheses.s"
 .PHONY : help
 
 

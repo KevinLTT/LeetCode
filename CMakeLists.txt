@@ -3,6 +3,6 @@ project( LeetCode )
 
 set( CMAKE_CXX_STANDARD 11 )
 
-add_executable( a.out 0030_2.cpp )
+add_executable( a.out main.cpp )
 
 

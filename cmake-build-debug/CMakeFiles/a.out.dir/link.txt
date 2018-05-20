@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/a.out.dir/0030_2.cpp.o  -o a.out 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/a.out.dir/main.cpp.o  -o a.out 

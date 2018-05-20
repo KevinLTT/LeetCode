@@ -86,7 +86,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/kevin/Desktop/Project/LeetCode/0030_2.cpp">
+		<Unit filename="/home/kevin/Desktop/Project/LeetCode/main.cpp">
 			<Option target="a.out"/>
 		</Unit>
 		<Unit filename="/home/kevin/Desktop/Project/LeetCode/CMakeLists.txt">

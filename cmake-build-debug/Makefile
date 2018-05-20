@@ -123,32 +123,32 @@ a.out/fast:
 	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
 .PHONY : a.out/fast
 
-0030_2.o: 0030_2.cpp.o
+main.o: main.cpp.o
 
-.PHONY : 0030_2.o
+.PHONY : main.o
 
 # target to build an object file
-0030_2.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0030_2.cpp.o
-.PHONY : 0030_2.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-0030_2.i: 0030_2.cpp.i
+main.i: main.cpp.i
 
-.PHONY : 0030_2.i
+.PHONY : main.i
 
 # target to preprocess a source file
-0030_2.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0030_2.cpp.i
-.PHONY : 0030_2.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-0030_2.s: 0030_2.cpp.s
+main.s: main.cpp.s
 
-.PHONY : 0030_2.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-0030_2.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0030_2.cpp.s
-.PHONY : 0030_2.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... a.out"
-	@echo "... 0030_2.o"
-	@echo "... 0030_2.i"
-	@echo "... 0030_2.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

@@ -2,9 +2,17 @@
 
 class Solution {
 public:
-    bool pair( string s, int i, int j )
+    inline bool indexValid( string s, int i )
     {
-        if( i >= s.size() || j >= s.size() )
+        if( s.empty() || i >= s.size() || i < 0 )
+            return false;
+        else
+            return true;
+    }
+
+    inline bool pair( string s, int i, int j )
+    {
+        if( !indexValid( s, i ) || !indexValid( s, j ) )
             return false;
 
         if( s[i] == '(' && s[j] == ')' )
@@ -13,79 +21,54 @@ public:
             return false;
     }
 
+    inline void checkAdjacent( string s, vector<int> &valid, int pre, int begin, int end )
+    {
+        if( !indexValid( s, pre ) || !indexValid( s, begin ) || !indexValid( s, end ) )
+            return; 
+
+        int sentinal = -1 * s.size();
+        if( valid[pre] > sentinal && valid[pre] <= 0 && valid[begin] > 0 )
+        {
+            int preBegin = -1 * valid[pre];
+            valid[preBegin] = valid[preBegin] + valid[begin];
+            valid[end] = valid[pre];
+        }
+    }
+
     int longestValidParentheses(string s) {
         if( s.empty() )
             return 0;
 
-        vector<int> valid( s.size(), -1 );
-        for( int i = 0; i < s.size()-1; i++ )
-            if( pair( s, i, i+1 ) )
-            {
-                valid[i] = 2;
-                valid[i+1] = i;
-            }
-
+        int sentinal = -1 * (int)s.size();
+        vector<int> valid( s.size(), sentinal );
         int longest = 0;
-        while( 1 )
+
+        for( int i = 0; i < s.size(); i++ )
         {
-            bool find = false;
-            
-            bool preValid = false;
-            int length = 0;
-            int begin = -1;
-            for( int i = 0; i < s.size(); i++ )
+            if( valid[i] <= sentinal )
             {
-                if( valid[i] >= 0 )
+                if( i-1 >= 0 && valid[i-1] <= sentinal  )
                 {
-                    if( i == 0 || i-1 >= 0 && valid[i-1] < 0 )
+                    if( pair( s, i-1, i ) )
                     {
-                        begin = i;
-                        length = 1;
-                    }
-                    else
-                    {
-                        length++;
-                        valid[begin] = length;
-                        valid[i] = begin;
+                        valid[i-1] = 2;
+                        valid[i] = -( i-1 );
+                        checkAdjacent( s, valid, i-2, i-1, i );
                     }
                 }
-                else if( i-1 >= 0 && valid[i-1] >= 0 )
+                else if( i-1 >= 0 && valid[i-1] > sentinal )
                 {
-                    if( begin-1 >= 0 && i < s.size() && pair( s, begin-1, i ) )
+                    int pre = -valid[i-1]-1;
+                    if( pre >= 0 && valid[pre] <= sentinal && pair( s, pre, i ) )
                     {
-                        valid[i] = begin-1;
-                        valid[begin-1] = valid[begin]+2;
-                        length += 2;
-                        begin = begin-1;
-                        if( begin-1 >= 0 && valid[begin-1] >= 0 )
-                        {
-                            valid[i] = valid[begin-1];
-                            valid[valid[i]] = valid[valid[i]] + valid[begin];
-                            begin = valid[i];
-                            length = valid[valid[i]];
-                        }
-                    }
-                    else
-                    {
-                        if( length > longest )
-                        {
-                            find = true;
-                            longest = length;
-                        }
-
-                        length = 0;
+                        valid[i] = -pre;
+                        valid[pre] = valid[pre+1] + 2;
+                        checkAdjacent( s, valid, pre-1, pre, i );
                     }
                 }
             }
-
-            if( length > longest )
-            {
-                find = true;
-                longest = length;
-            }
-
-            if( !find )
-                break;
+            if( valid[i] > sentinal && valid[-1*valid[i]] > longest )
+                longest = valid[-1*valid[i]];
         }
 
         return longest;

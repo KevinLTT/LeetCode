@@ -34,6 +34,7 @@ public:
 
             };
         }
+        cout << "pivot " << pivot << endl;
 
         int left = 0, right = nums.size()-1;
         while( left <= right )
@@ -47,7 +48,7 @@ public:
             else if( num < target )
                 left = mid + 1;
             else
-                return mid+pivot;
+                return  mid+pivot  >= nums.size() ? mid+pivot-nums.size() : mid+pivot;
         }
 
         return -1;
@@ -57,7 +58,7 @@ public:
 int main()
 {
     Solution s;
-    vector<int> nums = { 4, 5, 6, 7, 0 , 1, 2 };
+    vector<int> nums = { 3, 1 };
     cout << s.search( nums, 3 ) << endl;
 
     return 0;

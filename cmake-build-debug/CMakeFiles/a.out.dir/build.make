@@ -57,38 +57,38 @@ include CMakeFiles/a.out.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/a.out.dir/flags.make
 
-CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o: CMakeFiles/a.out.dir/flags.make
-CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o: ../0032_longestValidParentheses.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/Desktop/Project/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o -c /home/kevin/Desktop/Project/LeetCode/0032_longestValidParentheses.cpp
+CMakeFiles/a.out.dir/eightQueens.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/eightQueens.cpp.o: ../eightQueens.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kevin/Desktop/Project/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/eightQueens.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.out.dir/eightQueens.cpp.o -c /home/kevin/Desktop/Project/LeetCode/eightQueens.cpp
 
-CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/Desktop/Project/LeetCode/0032_longestValidParentheses.cpp > CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.i
+CMakeFiles/a.out.dir/eightQueens.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/eightQueens.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kevin/Desktop/Project/LeetCode/eightQueens.cpp > CMakeFiles/a.out.dir/eightQueens.cpp.i
 
-CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/Desktop/Project/LeetCode/0032_longestValidParentheses.cpp -o CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.s
+CMakeFiles/a.out.dir/eightQueens.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/eightQueens.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kevin/Desktop/Project/LeetCode/eightQueens.cpp -o CMakeFiles/a.out.dir/eightQueens.cpp.s
 
-CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.requires:
+CMakeFiles/a.out.dir/eightQueens.cpp.o.requires:
 
-.PHONY : CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.requires
+.PHONY : CMakeFiles/a.out.dir/eightQueens.cpp.o.requires
 
-CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.provides: CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.requires
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.provides.build
-.PHONY : CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.provides
+CMakeFiles/a.out.dir/eightQueens.cpp.o.provides: CMakeFiles/a.out.dir/eightQueens.cpp.o.requires
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/eightQueens.cpp.o.provides.build
+.PHONY : CMakeFiles/a.out.dir/eightQueens.cpp.o.provides
 
-CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.provides.build: CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o
+CMakeFiles/a.out.dir/eightQueens.cpp.o.provides.build: CMakeFiles/a.out.dir/eightQueens.cpp.o
 
 
 # Object files for target a.out
 a_out_OBJECTS = \
-"CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o"
+"CMakeFiles/a.out.dir/eightQueens.cpp.o"
 
 # External object files for target a.out
 a_out_EXTERNAL_OBJECTS =
 
-a.out: CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o
+a.out: CMakeFiles/a.out.dir/eightQueens.cpp.o
 a.out: CMakeFiles/a.out.dir/build.make
 a.out: CMakeFiles/a.out.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kevin/Desktop/Project/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable a.out"
@@ -99,7 +99,7 @@ CMakeFiles/a.out.dir/build: a.out
 
 .PHONY : CMakeFiles/a.out.dir/build
 
-CMakeFiles/a.out.dir/requires: CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o.requires
+CMakeFiles/a.out.dir/requires: CMakeFiles/a.out.dir/eightQueens.cpp.o.requires
 
 .PHONY : CMakeFiles/a.out.dir/requires
 

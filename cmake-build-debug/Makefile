@@ -123,32 +123,32 @@ a.out/fast:
 	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
 .PHONY : a.out/fast
 
-0032_longestValidParentheses.o: 0032_longestValidParentheses.cpp.o
+eightQueens.o: eightQueens.cpp.o
 
-.PHONY : 0032_longestValidParentheses.o
+.PHONY : eightQueens.o
 
 # target to build an object file
-0032_longestValidParentheses.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o
-.PHONY : 0032_longestValidParentheses.cpp.o
+eightQueens.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/eightQueens.cpp.o
+.PHONY : eightQueens.cpp.o
 
-0032_longestValidParentheses.i: 0032_longestValidParentheses.cpp.i
+eightQueens.i: eightQueens.cpp.i
 
-.PHONY : 0032_longestValidParentheses.i
+.PHONY : eightQueens.i
 
 # target to preprocess a source file
-0032_longestValidParentheses.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.i
-.PHONY : 0032_longestValidParentheses.cpp.i
+eightQueens.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/eightQueens.cpp.i
+.PHONY : eightQueens.cpp.i
 
-0032_longestValidParentheses.s: 0032_longestValidParentheses.cpp.s
+eightQueens.s: eightQueens.cpp.s
 
-.PHONY : 0032_longestValidParentheses.s
+.PHONY : eightQueens.s
 
 # target to generate assembly for a file
-0032_longestValidParentheses.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.s
-.PHONY : 0032_longestValidParentheses.cpp.s
+eightQueens.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/eightQueens.cpp.s
+.PHONY : eightQueens.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... a.out"
-	@echo "... 0032_longestValidParentheses.o"
-	@echo "... 0032_longestValidParentheses.i"
-	@echo "... 0032_longestValidParentheses.s"
+	@echo "... eightQueens.o"
+	@echo "... eightQueens.i"
+	@echo "... eightQueens.s"
 .PHONY : help
 
 

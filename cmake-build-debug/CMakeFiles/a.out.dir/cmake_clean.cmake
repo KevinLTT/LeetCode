@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/a.out.dir/0032_longestValidParentheses.cpp.o"
+  "CMakeFiles/a.out.dir/eightQueens.cpp.o"
   "a.out.pdb"
   "a.out"
 )
